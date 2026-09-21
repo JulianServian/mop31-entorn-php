@@ -1,0 +1,130 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    color: #252a30;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #20252b;
+    color: white;
+    padding: 25px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+header p {
+    flex: 1;
+    font-size: 22px;
+    margin: 0;
+    padding-left: 0;
+    text-align: center;
+}
+
+main {
+    min-height: 400px;
+    padding: 30px;
+    flex: 1;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 950px;
+    margin: auto;
+    padding: 35px;
+    background-color: #f4f6f8;
+    box-shadow: 0 8px 24px rgba(32, 37, 43, 0.12);
+    border-radius: 12px;
+}
+
+.column {
+    flex: 1;
+}
+
+.column-profile {
+    max-width: 280px;
+    text-align: center;
+}
+
+.column-profile img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+.card h2 {
+    margin: 15px 0 0;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.card p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin: 15px 0 0;
+}
+
+.description {
+    max-width: 560px;
+}
+
+.description h2 {
+    color: #20252b;
+    text-align: left;
+}
+
+footer {
+    background-color: #20252b;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 12px;
+}
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    header p {
+        font-size: 18px;
+    }
+
+    main {
+        padding: 20px 15px;
+    }
+
+    .card {
+        flex-direction: column;
+        gap: 25px;
+        padding: 25px 20px;
+    }
+
+    .column-profile,
+    .description {
+        max-width: none;
+        width: 100%;
+    }
+
+    .description h2 {
+        text-align: center;
+    }
+}
