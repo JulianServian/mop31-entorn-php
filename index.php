@@ -1,10 +1,13 @@
 <?php
 
-$nombre = "Julián";
+$nombre = "Julián Servián Guanes";
 $edad = 19;
 $curso = "DAW2";
 $colegio = "Fp llefia";
-$foto = "/img/julian.png";
+$foto = "img/julian.jpg";
+$logo = "img/logollefia.png";
+$descripcion = "Aquesta pàgina hola.php forma part de la pràctica 1 del mòdul 7. En el fitxer index.php, normalment s'hi defineixen les parts bàsiques d'una pàgina PHP, com ara el header, que conté informació inicial de la pàgina, així com el logo o títol, i el body, on es mostren els continguts principals. També es pot veure l'estructura de columnes que separen les diferents seccions del disseny.";
+$fecha = "21/09/2026";
 
 ?>
 
@@ -19,7 +22,7 @@ $foto = "/img/julian.png";
 <body>
 
     <header>
-        <h1>FP Llefià</h1>
+        <h1><img src="<?php echo $logo; ?>" alt="Logo FP Llefià"></h1>
         <p>Módulo 7 - Práctica 1. Mi primera aplicación en PHP</p>
     </header>
 
@@ -35,11 +38,16 @@ $foto = "/img/julian.png";
                 <p>Curso: <?php echo $curso; ?></p>
                 <p>Colegio: <?php echo $colegio; ?></p>
             </div>
+
+            <div class="description">
+                <p><?php echo $descripcion; ?></p>
+            </div>
         </div>
     </main>
 
     <footer>
         <?php echo $nombre; ?> - <?php echo $curso; ?>
+        <p>La fecha de hoy es <?php echo $fecha; ?></p>
     </footer>
 
 </body>
