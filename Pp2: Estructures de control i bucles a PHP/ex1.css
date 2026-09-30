@@ -1,0 +1,27 @@
+body {
+			margin: 0;
+			padding: 2rem;
+			background: #f3f6f4;
+			color: #18352c;
+			font-family: Arial, sans-serif;
+		}
+
+main {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.nombres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.nombre {
+    flex: 1 1 72px;
+    padding: 0.75rem;
+    background: #fff;
+    border: 1px solid #cbd9d1;
+    border-radius: 4px;
+    text-align: center;
+}
