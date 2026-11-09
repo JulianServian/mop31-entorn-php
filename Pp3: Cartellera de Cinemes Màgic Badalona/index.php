@@ -11,31 +11,44 @@ require __DIR__ . "/pelicules.php";
 </head>
 <body>
     <header class="cabecera">
-        <h1>Cartellera de Cinemes Màgic Badalona</h1>
+        <div class="barra">
+            <a class="logo" href="index.php">OCINE <span>MÀGIC</span></a>
+            <nav>
+                <a href="index.php">Cartellera</a>
+                <a href="#pellicules">Pel·lícules</a>
+                <a href="https://www.ocinemagic.es/">El cinema</a>
+            </nav>
+        </div>
     </header>
 
+    <section class="banner">
+        <h1>Cinema per a tothom</h1>
+        <p>Tria una pel·lícula i consulta els horaris.</p>
+    </section>
+
     <main class="contenedor">
+        <h2 id="pellicules">Cartellera</h2>
         <div class="tarjetas">
             <?php foreach ($pelicules as $id => $pelicula) { ?>
                 <article class="tarjeta">
-                    <div class="cartell">
+                    <div class="cartel">
                         <?php if ($pelicula["imatge"] != "") { ?>
                             <img src="<?php echo $pelicula["imatge"]; ?>" alt="Cartell de <?php echo $pelicula["nom"]; ?>">
                         <?php } else { ?>
                             <p>Imatge no disponible</p>
                         <?php } ?>
                     </div>
-                    <div class="contingut">
+                    <div class="contenido">
                         <h2><?php echo $pelicula["nom"]; ?></h2>
-                        <p>Horaris:</p>
-                        <ul>
+                        <p>Avui, horaris:</p>
+                        <div class="horarios">
                             <?php foreach ($pelicula["horaris"] as $hora) { ?>
-                                <li><?php echo $hora; ?></li>
+                                <span><?php echo $hora; ?></span>
                             <?php } ?>
-                        </ul>
-                        <div class="botons">
-                            <a class="boto" href="trailer.php?id=<?php echo $id; ?>">Veure tràiler</a>
-                            <a class="boto boto-secundari" href="detall.php?id=<?php echo $id; ?>">Més informació</a>
+                        </div>
+                        <div class="botones">
+                            <a class="boton" href="trailer.php?id=<?php echo $id; ?>">▶ Tràiler</a>
+                            <a class="boton boton-secundario" href="detall.php?id=<?php echo $id; ?>">Més informació</a>
                         </div>
                     </div>
                 </article>

@@ -18,10 +18,13 @@ if (isset($_GET["id"]) && isset($pelicules[$_GET["id"]])) {
 </head>
 <body>
     <header class="cabecera">
-        <h1>Tràiler</h1>
+        <div class="barra">
+            <a class="logo" href="index.php">OCINE <span>MÀGIC</span></a>
+            <nav><a href="index.php">Tornar a la cartellera</a></nav>
+        </div>
     </header>
 
-    <main class="contenidor">
+    <main class="contenedor">
         <?php if ($pelicula == null) { ?>
             <h2>Pel·lícula no trobada</h2>
         <?php } else { ?>

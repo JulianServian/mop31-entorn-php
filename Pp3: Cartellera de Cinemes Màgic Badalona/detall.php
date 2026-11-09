@@ -18,23 +18,26 @@ if (isset($_GET["id"]) && isset($pelicules[$_GET["id"]])) {
 </head>
 <body>
     <header class="cabecera">
-        <h1>Detall de la pel·lícula</h1>
+        <div class="barra">
+            <a class="logo" href="index.php">OCINE <span>MÀGIC</span></a>
+            <nav><a href="index.php">Tornar a la cartellera</a></nav>
+        </div>
     </header>
 
-    <main class="contenidor">
+    <main class="contenedor">
         <?php if ($pelicula == null) { ?>
             <h2>Pel·lícula no trobada</h2>
         <?php } else { ?>
             <h2><?php echo $pelicula["nom"]; ?></h2>
 
             <?php if ($pelicula["imatge"] != "") { ?>
-                <img class="cartell" src="<?php echo $pelicula["imatge"]; ?>" alt="Cartell de <?php echo $pelicula["nom"]; ?>">
+                <img class="cartel" src="<?php echo $pelicula["imatge"]; ?>" alt="Cartell de <?php echo $pelicula["nom"]; ?>">
             <?php } else { ?>
                 <p>Imatge no disponible</p>
             <?php } ?>
 
             <p><?php echo $pelicula["sinopsi"]; ?></p>
-            <dl class="dades">
+            <dl class="datos">
                 <dt>Durada</dt>
                 <dd><?php echo $pelicula["durada"]; ?> minuts</dd>
                 <dt>Director</dt>
@@ -55,10 +58,15 @@ if (isset($_GET["id"]) && isset($pelicules[$_GET["id"]])) {
 
             <?php if ($id == 10 && isset($pelicula["valoracio"])) { ?>
                 <h3>Valoració</h3>
-                <p class="estrelles">★★★★☆ (<?php echo $pelicula["valoracio"]; ?>/5)</p>
+                <p class="estrellas">
+                    <?php for ($i = 1; $i <= 5; $i++) { ?>
+                        <?php if ($i <= $pelicula["valoracio"]) { ?>★<?php } else { ?>☆<?php } ?>
+                    <?php } ?>
+                    (<?php echo $pelicula["valoracio"]; ?>/5)
+                </p>
             <?php } ?>
 
-            <p><a class="boto" href="trailer.php?id=<?php echo $id; ?>">Veure tràiler</a></p>
+            <p><a class="boton" href="trailer.php?id=<?php echo $id; ?>">Veure tràiler</a></p>
 
             <?php if ($id == 10 && isset($pelicula["galeria"])) { ?>
                 <h3>Imatges de la pel·lícula</h3>
