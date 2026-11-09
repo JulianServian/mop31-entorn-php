@@ -1,7 +1,6 @@
-
 <?php
 
-require_once "../includes/iniciar.php";
+require_once __DIR__ . "/../includes/iniciar.php";
 
 if (isset($_POST['accion'])) {
 
@@ -64,5 +63,3 @@ if (isset($_POST['accion'])) {
 // Volver a la pagina principal
 header("Location: index.php");
 exit();
-
-?>

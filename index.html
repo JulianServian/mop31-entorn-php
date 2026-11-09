@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis proyectos</title>
+    <style>
+        :root {
+            color-scheme: light;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            color: #172033;
+            background: #f3f6fb;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 64px 24px;
+        }
+
+        main {
+            width: min(100%, 900px);
+            margin: 0 auto;
+        }
+
+        .eyebrow {
+            margin: 0 0 10px;
+            color: #5368c5;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            letter-spacing: -0.05em;
+        }
+
+        .intro {
+            margin: 12px 0 32px;
+            color: #536078;
+            font-size: 1.1rem;
+        }
+
+        nav {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+            gap: 16px;
+        }
+
+        nav a {
+            display: block;
+            min-height: 150px;
+            padding: 24px;
+            border: 1px solid #e0e6f0;
+            border-radius: 16px;
+            background: #fff;
+            color: inherit;
+            text-decoration: none;
+            transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+        }
+
+        nav a:hover {
+            transform: translateY(-3px);
+            border-color: #9aa8eb;
+            box-shadow: 0 12px 28px rgb(34 49 95 / 10%);
+        }
+
+        nav a:focus-visible {
+            outline: 3px solid #5368c5;
+            outline-offset: 3px;
+        }
+
+        h2 {
+            margin: 0 0 10px;
+            font-size: 1.2rem;
+        }
+
+        nav p {
+            margin: 0;
+            color: #647087;
+            line-height: 1.6;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            nav a {
+                transition: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <p class="eyebrow">Portfolio de prácticas</p>
+        <h1>Mis proyectos</h1>
+        <p class="intro">Elige un proyecto para abrirlo.</p>
+
+        <nav aria-label="Proyectos">
+            <a href="Pp1.%20Primera%20aplicaci%C3%B3%20en%20PHP/index.php">
+                <h2>Pp1. Primera aplicació en PHP</h2>
+                <p>Una tarjeta de presentación personal creada con PHP.</p>
+            </a>
+            <a href="Pp2%3A%20Estructures%20de%20control%20i%20bucles%20a%20PHP/index.php">
+                <h2>Pp2: Estructures de control i bucles a PHP</h2>
+                <p>Ejercicios de PHP con condicionales, operadores y bucles.</p>
+            </a>
+            <a href="Pp3%3A%20Cartellera%20de%20Cinemes%20M%C3%A0gic%20Badalona/index.php">
+                <h2>Pp3: Cartellera de Cinemes Màgic Badalona</h2>
+                <p>Una aplicación de cartelera de cine con películas y tráilers.</p>
+            </a>
+            <a href="Pp%20Extra%20rep%C3%A0s%20sessions/reciclaje/index.php">
+                <h2>Pp Extra repàs sessions: Reciclaje</h2>
+                <p>Una práctica de sesiones de PHP para clasificar residuos.</p>
+            </a>
+        </nav>
+    </main>
+</body>
+</html>

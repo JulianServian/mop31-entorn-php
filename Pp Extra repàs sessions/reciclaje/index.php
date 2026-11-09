@@ -1,7 +1,6 @@
-
 <?php
 
-require_once "../includes/iniciar.php";
+require_once __DIR__ . "/../includes/iniciar.php";
 
 $nombreResiduos = [
     "papel" => "Papel",
@@ -14,7 +13,7 @@ $nombreResiduos = [
 
 $residuoActual = $_SESSION['basura'][0];
 
-require "../includes/cabecera.php";
+require __DIR__ . "/../includes/cabecera.php";
 
 ?>
 
@@ -93,4 +92,4 @@ if (isset($_SESSION['mensaje'])) {
     <button type="submit">Reiniciar partida</button>
 </form>
 
-<?php require "../includes/pie.php"; ?>
+<?php require __DIR__ . "/../includes/pie.php"; ?>

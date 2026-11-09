@@ -39,5 +39,3 @@ $residuos = [
     "lata" => "plastico",
     "manzana" => "organico"
 ];
-
-?>
